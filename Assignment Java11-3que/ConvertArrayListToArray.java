@@ -17,13 +17,13 @@ public class ConvertArrayListToArray {
 		al.add("lazy");
 		al.add("dog");
 		
-		String arr[]= new String [al.size()];
+		//String arr[]= new String [al.size()];
 		
-		for (int i=0;i<al.size();i++) {
-			arr[i]=al.get(i);
+		//for (int i=0;i<al.size();i++) {
+		//	arr[i]=al.get(i);
 			
-		}
-		
+		//}
+		String arr[]=al.toArray(new String[al.size()]);
 		for (String j:arr) {
 			System.out.println(j);
 		}
