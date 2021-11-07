@@ -52,6 +52,12 @@ public class All {
 	      .stream()
 	      .max(Map.Entry.comparingByValue())
 	      .ifPresent(l-> System.out.println("News Id : "+ l.getKey() + " has the maxium comment i.e. :" + l.getValue()));
+	//5 th answer
+		
+	System.out.println("\n"+"Stream 5th Question output");
+	newslist.stream().filter(l-> l.comment.equalsIgnoreCase("Budget")).collect(Collectors.groupingBy(l -> l.comment, Collectors.counting()))
+	    .entrySet().stream().max(Map.Entry.comparingByValue())
+	    .ifPresent(l-> System.out.println( l.getKey() + " are arrived " + l.getValue() + " times")); 	
 		
          
          //6th answers
@@ -84,7 +90,11 @@ public class All {
          System.out.println("\n"+"Stream 11th Question output");
          traderlist.stream().sorted(Comparator.comparing(l->l.name)).forEach(l->System.out.print(l+"\t"));
          
-         
+        
+	//12th answer
+		
+	System.out.println("\n"+"Stream 12th Question output");
+	traderList.stream().filter(l -> l.city.equalsIgnoreCase("Indore")).forEach(System.out::println);
          
         //13th answers
          System.out.println("\n"+"Stream 13th Question output");
